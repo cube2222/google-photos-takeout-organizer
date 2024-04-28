@@ -30,6 +30,13 @@ Importantly, the Trash is ignored.
 
 Photos are deduplicated based on a hash of their content. The Archive does not take part in this deduplication.
 
+## EXIF data
+
+The script will attempt to run `exiftool` to update file modified times to match the photo's EXIF metadata creation times. You can install it e.g. via homebrew:
+```
+brew install exiftool
+```
+
 ## Usage
 Just build and run the script passing as the first argument the extracted `Takeout` directory, and as the second argument the target directory where the organized data will be stored.
 
